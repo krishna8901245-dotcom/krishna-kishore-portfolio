@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Krishna Kishore — BBA student at Woxsen University. Personal portfolio, projects, education, achievements and future journey.">
+<title>Krishna Kishore | Personal Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080d; --panel:rgba(255,255,255,.065); --line:rgba(255,255,255,.12);
+  --text:#f5f7fb; --muted:#a9afbd; --accent:#7c5cff; --accent2:#23d5ab;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 20% 0%,#17112f 0,transparent 35%),radial-gradient(circle at 90% 30%,#082d2a 0,transparent 30%),var(--bg);color:var(--text);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+#space{position:fixed;inset:0;z-index:-2}
+.noise{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1120px,92%);display:flex;justify-content:space-between;align-items:center;padding:12px 16px 12px 20px;background:rgba(8,9,14,.62);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:18px;z-index:20}
+.logo{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.04em}.logo span{color:var(--accent2)}
+nav .links{display:flex;gap:20px;font-size:13px;color:#d8dbe3}
+nav .links a:hover{color:white}
+.menu{display:none}
+.hero{min-height:100vh;display:grid;place-items:center;padding:130px 7% 80px}
+.hero-inner{width:min(1180px,100%);display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);background:var(--panel);border-radius:999px;color:#d9dce4;font-size:12px;margin-bottom:20px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 16px var(--accent2)}
+h1{font-family:"Space Grotesk";font-size:clamp(55px,8vw,108px);line-height:.88;letter-spacing:-.075em;margin-bottom:25px}
+h1 .gradient{background:linear-gradient(110deg,#fff 10%,#9b8cff 48%,#5ce9cf 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;line-height:1.75;color:var(--muted);max-width:650px}
+.cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:13px 18px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.07);font-weight:600;font-size:14px;transition:.25s}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#9b67ff);border-color:transparent}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(0,0,0,.3)}
+.scene{perspective:1200px;height:590px;display:grid;place-items:center}
+.photo-card{width:min(430px,80vw);height:540px;border-radius:28px;position:relative;transform-style:preserve-3d;transition:transform .12s ease-out;box-shadow:0 40px 90px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.18);overflow:hidden}
+.photo-card img{width:100%;height:100%;object-fit:cover}
+.photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.75));pointer-events:none}
+.card-label{position:absolute;z-index:2;bottom:24px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:end;transform:translateZ(45px)}
+.card-label small{display:block;color:#c9ccd5;font-size:11px;margin-bottom:5px}.card-label strong{font-family:"Space Grotesk";font-size:24px}
+.float{position:absolute;padding:12px 15px;border-radius:15px;background:rgba(12,13,20,.76);border:1px solid var(--line);backdrop-filter:blur(12px);font-size:12px;font-weight:600;box-shadow:0 20px 40px rgba(0,0,0,.3);animation:float 4s ease-in-out infinite}
+.f1{top:80px;right:-25px}.f2{bottom:105px;left:-30px;animation-delay:1s}.f3{top:180px;left:-50px;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-12px)}}
+section{width:min(1120px,88%);margin:0 auto;padding:110px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--accent2);margin-bottom:10px}
+h2{font-family:"Space Grotesk";font-size:clamp(34px,5vw,62px);letter-spacing:-.055em;line-height:1}
+.section-head p{color:var(--muted);max-width:420px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:inset 0 1px rgba(255,255,255,.04);transition:.3s}
+.glass:hover{transform:translateY(-7px);border-color:rgba(155,140,255,.45)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
+.about img{width:100%;height:100%;min-height:420px;object-fit:cover;border-radius:22px;border:1px solid var(--line)}
+.about-copy{display:flex;flex-direction:column;justify-content:center;padding:40px}
+.about-copy p{color:var(--muted);line-height:1.9;margin-top:18px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
+.stat{padding:16px;border:1px solid var(--line);border-radius:15px;background:rgba(0,0,0,.15)}
+.stat b{font-family:"Space Grotesk";font-size:25px;display:block}.stat span{color:var(--muted);font-size:11px}
+.timeline{position:relative;display:grid;gap:18px}
+.timeline:before{content:"";position:absolute;left:17px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--accent),transparent)}
+.event{position:relative;padding-left:55px}
+.event:before{content:"";position:absolute;left:11px;top:28px;width:13px;height:13px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(35,213,171,.1)}
+.event .year{font-size:11px;color:var(--accent2);letter-spacing:.14em;text-transform:uppercase}
+.event h3{font-family:"Space Grotesk";font-size:22px;margin:8px 0}.event p{color:var(--muted);line-height:1.7;font-size:14px}
+.project img{width:100%;height:220px;object-fit:cover;border-radius:16px;margin-bottom:18px}.project h3{font-family:"Space Grotesk";font-size:22px}.project p{color:var(--muted);line-height:1.65;font-size:13px;margin-top:8px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.tag{font-size:10px;padding:7px 9px;border:1px solid var(--line);border-radius:999px;color:#d6d9e2}
+.skills{display:flex;flex-wrap:wrap;gap:12px}.skill{padding:17px 20px;border-radius:16px;background:rgba(255,255,255,.055);border:1px solid var(--line);font-weight:600;font-size:14px;transition:.25s}.skill:hover{transform:rotateX(8deg) rotateY(-8deg) translateY(-4px);border-color:var(--accent)}
+.future{min-height:430px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.future-card{position:relative;overflow:hidden;padding:42px}.future-card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-100px;top:-100px;background:radial-gradient(circle,rgba(124,92,255,.55),transparent 65%);filter:blur(8px)}
+.future-card p{color:var(--muted);line-height:1.9;margin-top:20px;max-width:520px}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.social{padding:25px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.045);text-align:center;font-weight:700;transition:.25s}.social:hover{background:rgba(255,255,255,.09);transform:translateY(-5px)}
+footer{padding:60px 7%;border-top:1px solid var(--line);text-align:center;color:#777e8d;font-size:12px}
+footer strong{color:#dfe2e9}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){
+ nav .links{display:none}.menu{display:block;font-size:13px}
+ .hero-inner,.about,.future{grid-template-columns:1fr}.hero{padding-top:130px}.scene{height:500px}.photo-card{height:460px}
+ .grid{grid-template-columns:1fr}.socials{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:15px}
+ .f1{right:-5px}.f2{left:-5px}.f3{left:-5px}
+}
+
+.social-dock{position:fixed;right:20px;bottom:20px;z-index:15;display:flex;gap:7px;padding:7px;border:1px solid var(--line);background:rgba(8,9,14,.7);backdrop-filter:blur(16px);border-radius:15px}
+.social-dock a{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;font-size:11px;font-weight:800;background:rgba(255,255,255,.07);border:1px solid transparent;transition:.2s}
+.social-dock a:hover{transform:translateY(-3px);border-color:rgba(124,92,255,.55);background:rgba(124,92,255,.15)}
+@media(max-width:800px){.social-dock{right:12px;bottom:12px}}
+</style>
+</head>
+<body>
+<canvas id="space"></canvas><div class="noise"></div>
+
+<nav>
+  <a class="logo" href="#home">KK<span>.</span></a>
+  <div class="links">
+    <a href="#about">About</a><a href="#journey">Journey</a><a href="#memories">Memories</a><a href="#future">Future</a><a href="#contact">Contact</a>
+  </div>
+  <div class="menu">Portfolio 2026</div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-inner">
+    <div class="reveal">
+      <div class="eyebrow"><span class="dot"></span> BBA Student • Woxsen University</div>
+      <h1>Krishna<br><span class="gradient">Kishore.</span></h1>
+      <p>Building my journey through business, projects, ideas and continuous self-improvement. This is my digital space to document where I started, what I am building today, and where I want to go next.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Explore my work ↗</a>
+        <a class="btn" href="#contact">Let's connect</a>
+      </div>
+    </div>
+    <div class="scene reveal" id="scene">
+      <div class="photo-card" id="photoCard">
+        <img src="assets/hero.png" alt="Krishna Kishore in a formal suit">
+        <div class="card-label"><div><small>CURRENT CHAPTER</small><strong>Woxsen University</strong></div><div>2026 ↗</div></div>
+      </div>
+      <div class="float f1">BBA • Business</div>
+      <div class="float f2">Always upgrading ↗</div>
+      <div class="float f3">Projects + Ideas</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-head reveal"><div><div class="kicker">01 / About</div><h2>More than a<br>student.</h2></div><p>A portfolio that grows with me as I learn, experiment, build and discover new opportunities.</p></div>
+  <div class="about">
+    <img class="reveal" src="assets/campus.png" alt="Krishna Kishore at Woxsen University">
+    <div class="glass about-copy reveal">
+      <div class="kicker">The story so far</div>
+      <h3 style="font-family:Space Grotesk;font-size:32px">Learning with intention.</h3>
+      <p>I am Krishna Kishore, currently pursuing a BBA at Woxsen University. My academic journey began in Vijayawada, where I completed my 10th at Vivekananda English Medium High School and then studied MEC at Masterminds.</p>
+      <p>Now I am focused on upgrading myself through university projects, new courses, business ideas, technology, communication and real-world experiences. I want this website to become a living record of that growth.</p>
+      <div class="stats"><div class="stat"><b>BBA</b><span>Current degree</span></div><div class="stat"><b>Woxsen</b><span>University</span></div><div class="stat"><b>∞</b><span>Room to grow</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="section-head reveal"><div><div class="kicker">02 / Journey</div><h2>Where I<br>started.</h2></div><p>Every stage adds something new. The timeline can be updated as the next chapter begins.</p></div>
+  <div class="timeline">
+    <div class="glass event reveal"><div class="year">School</div><h3>Vivekananda English Medium High School</h3><p>Completed my 10th standard in Vijayawada, building the foundation for the next stage of my education.</p></div>
+    <div class="glass event reveal"><div class="year">Intermediate</div><h3>Masterminds • MEC</h3><p>Studied MEC and continued developing my interest in business, commerce and practical thinking.</p></div>
+    <div class="glass event reveal"><div class="year">Present</div><h3>BBA • Woxsen University</h3><p>Currently pursuing BBA and actively working on projects, skills, university experiences and new ideas.</p></div>
+    <div class="glass event reveal"><div class="year">Next</div><h3>The chapter I am building</h3><p>More projects, courses, achievements, internships, experiences and opportunities. This timeline will keep growing.</p></div>
+  </div>
+</section>
+
+<section id="memories">
+  <div class="section-head reveal"><div><div class="kicker">03 / Memories</div><h2>Moments I<br>want to remember.</h2></div><p>A visual collection of my memories and experiences from my journey at Woxsen University.</p></div>
+  <div class="grid">
+    <article class="glass project reveal"><img src="assets/woxsen.png" alt="Krishna Kishore at Woxsen University"><h3>My Woxsen Beginning</h3><p>A special memory from the beginning of my journey at Woxsen University. The campus, the first experiences and the feeling of starting a new chapter.</p><div class="tags"><span class="tag">Woxsen</span><span class="tag">Beginning</span><span class="tag">Memory</span></div></article>
+    <article class="glass project reveal"><img src="assets/journey.png" alt="Krishna Kishore at Woxsen University"><h3>Campus Memories</h3><p>Moments from university life that I want to keep as part of my personal journey, from everyday experiences to memorable days.</p><div class="tags"><span class="tag">Campus Life</span><span class="tag">Experience</span><span class="tag">Memories</span></div></article>
+    <article class="glass project reveal"><img src="assets/elevator.png" alt="Krishna Kishore in a formal outfit"><h3>Growing Along the Way</h3><p>Photos and moments that represent how I am becoming more confident, professional and independent during my university journey.</p><div class="tags"><span class="tag">Growth</span><span class="tag">Journey</span><span class="tag">Personal</span></div></article>
+  </div>
+</section>
+
+<section>
+  <div class="section-head reveal"><div><div class="kicker">04 / Skills</div><h2>What I am<br>developing.</h2></div><p>These are areas I am actively learning and improving. They will evolve with experience.</p></div>
+  <div class="glass reveal"><div class="skills">
+    <div class="skill">Business & Management</div><div class="skill">Entrepreneurship</div><div class="skill">Leadership</div><div class="skill">Communication</div><div class="skill">Strategy</div><div class="skill">Supply Chain</div><div class="skill">AI & Digital Tools</div><div class="skill">Creative Thinking</div><div class="skill">Presentation</div><div class="skill">Problem Solving</div>
+  </div></div>
+</section>
+
+<section id="future">
+  <div class="section-head reveal"><div><div class="kicker">05 / Future</div><h2>Still<br>loading...</h2></div><p>The goal is not to have everything figured out. The goal is to keep moving forward.</p></div>
+  <div class="future">
+    <div class="glass future-card reveal"><div class="kicker">My direction</div><h3 style="font-family:Space Grotesk;font-size:35px">Build a career that keeps me learning.</h3><p>I want to use my BBA journey as a foundation for deeper business knowledge, practical experience, entrepreneurship and continuous personal development.</p></div>
+    <div class="glass future-card reveal"><div class="kicker">Next milestones</div><h3 style="font-family:Space Grotesk;font-size:35px">Projects. Courses. Experiences.</h3><p>This space is intentionally open. New achievements, certifications, internships, competitions and future goals can be added here as they happen.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-head reveal"><div><div class="kicker">06 / Connect</div><h2>Let's stay<br>connected.</h2></div><p>Follow the journey across my social platforms.</p></div>
+  <div class="socials reveal">
+    <a class="social" href="https://www.instagram.com/krishnakishore.official/" target="_blank" rel="noopener">Instagram ↗</a>
+    <a class="social" href="https://www.linkedin.com/in/dogiparthi-krishna-kishore-3598a0428/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="social" href="https://youtube.com/@krishnakishore.official" target="_blank" rel="noopener">YouTube ↗</a>
+    <a class="social" href="https://www.facebook.com/share/p/18vEKPoA5j/" target="_blank" rel="noopener">Facebook ↗</a>
+  </div>
+  <div class="glass reveal" style="margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+    <div>
+      <div class="kicker">Stay connected</div>
+      <h3 style="font-family:Space Grotesk;font-size:24px">Follow the journey as it grows.</h3>
+      <p style="color:var(--muted);font-size:13px;line-height:1.6;margin-top:6px">Instagram, LinkedIn, Facebook and YouTube are connected directly. Follow my journey across all four platforms.</p>
+    </div>
+    <button class="btn primary" onclick="copyPortfolioLink(event)">Copy portfolio link</button>
+  </div>
+</section>
+</main>
+
+
+<div class="social-dock" aria-label="Social media shortcuts">
+  <a href="https://www.instagram.com/krishnakishore.official/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+  <a href="https://www.linkedin.com/in/dogiparthi-krishna-kishore-3598a0428/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+  <a href="https://www.facebook.com/share/p/18vEKPoA5j/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+  <a href="https://youtube.com/@krishnakishore.official" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+</div>
+<footer>© 2026 <strong>Krishna Kishore</strong> • Personal Portfolio • Built as a record of the journey.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const canvas=document.getElementById('space');
+const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth,innerHeight);
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,100);
+camera.position.z=7;
+const geometry=new THREE.BufferGeometry();
+const count=950;
+const positions=new Float32Array(count*3);
+for(let i=0;i<count*3;i++) positions[i]=(Math.random()-.5)*22;
+geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));
+const material=new THREE.PointsMaterial({size:.018,color:0xffffff,transparent:true,opacity:.55});
+const stars=new THREE.Points(geometry,material);scene.add(stars);
+function animate(){requestAnimationFrame(animate);stars.rotation.y+=.00035;stars.rotation.x+=.00008;renderer.render(scene,camera)}animate();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+const card=document.getElementById('photoCard'), wrap=document.getElementById('scene');
+wrap.addEventListener('mousemove',e=>{const r=wrap.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`rotateY(${x*14}deg) rotateX(${-y*12}deg)`});
+wrap.addEventListener('mouseleave',()=>card.style.transform='rotateY(0deg) rotateX(0deg)');
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+function copyPortfolioLink(event){
+  if(event) event.preventDefault();
+  const url = window.location.href;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(url).then(()=>{
+      const buttons=document.querySelectorAll('[onclick*="copyPortfolioLink"]');
+      buttons.forEach(b=>{const old=b.textContent;b.textContent='Link copied ✓';setTimeout(()=>b.textContent=old,1600)});
+    });
+  }else{
+    alert('Copy this page URL from your browser address bar.');
+  }
+  return false;
+}
+</script>
+</body>
+</html>
